@@ -59,7 +59,7 @@ plugins:
 
 author:
   name   : "Taz Uddin"
-  avatar : "/assets/images/taz-photo-1.jpg"
+  avatar : "/assets/images/taz-photo-2.jpg"
   bio    : "I'm a full-stack developer"
   links:
     - label: "Website"

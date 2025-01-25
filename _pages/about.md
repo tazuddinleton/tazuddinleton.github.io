@@ -3,6 +3,10 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Hi, I’m Taz—a passionate software engineer with over 8 years of experience developing cutting-edge enterprise web applications. My journey in tech has led me to work on diverse projects, including Fin-Tech platforms, ERP systems, EIMS, geotechnical reporting systems, and SaaS applications.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I specialize in back-end development and have a knack for crafting robust, scalable, and efficient solutions. Whether I’m building complex microservices, optimizing database queries, or integrating systems seamlessly, I thrive on turning challenges into opportunities.
+
+I’m currently diving into freelance opportunities, where I bring my expertise in technologies like ASP.NET, Entity Framework, PostgreSQL, and JavaScript frameworks to help businesses achieve their goals. Alongside freelancing, I’m also completing my BSc in Computer Science and Engineering to solidify my academic foundation.
+
+When I’m not coding, you’ll find me exploring emerging tech trends, mentoring junior developers, or brainstorming ideas for my dream software company. Let’s connect and create something impactful together!
