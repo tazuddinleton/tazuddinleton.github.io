@@ -61,6 +61,7 @@ author:
   name   : "Taz Uddin"
   avatar : "/assets/images/taz-photo-2.jpg"
   bio    : "I'm a full-stack developer"
+  location: "Dhaka, BD"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"

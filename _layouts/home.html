@@ -1,0 +1,23 @@
+---
+layout: single
+author_profile: true
+---
+<div class="home-content">
+
+  <section class="portfolio-section">
+    <h2>Featured Projects</h2>
+    <div class="portfolio-grid">
+      {% for portfolio in site.portfolio %}
+      <div class="portfolio-item">
+        {% if portfolio.header.image %}
+        <a href="{{ portfolio.url }}">
+          <img src="{{ portfolio.header.image }}" alt="{{ portfolio.title }}" class="portfolio-image">
+        </a>
+        {% endif %}
+        <h3><a href="{{ portfolio.url }}">{{ portfolio.title }}</a></h3>
+        <p>{{ portfolio.excerpt | strip_html | truncatewords: 20 }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
