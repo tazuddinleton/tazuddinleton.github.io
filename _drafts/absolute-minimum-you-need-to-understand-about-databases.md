@@ -47,7 +47,34 @@ The non-relational databases are of four categories:
 Now, let's look at each of these to understand what they are about, what are the differences and when they should be considered.
 
 ### Relational Database Management System
-Relational databases or SQL databases stores the data in rows and columns and uses SQL or Structured Query Language to read, write and modify the data.
+Relational databases or SQL databases stores the data in tables, rows and columns and uses SQL or Structured Query Language to read, write and modify the data.
+Without going into lots of detail about theories of relational databses, understanding a few concepts around this will help:
+- Table, row and column
+- Schema
+- DDL
+- DML
+- Referential Integrity
+- Keys (Primary key, Foreign key)
+- Indexes
+- Constraints
+- Transactions and ACID property
+- Stored Procedure, Function and Trigger
+
+Now going into details about each of these topics will increase the scope of this post, rather let's learn what they are and what purpose they serve.
+In future posts in this series we will go a lot deeper about all of them and some more relevant topics such as Database Partitioning, Sharding in distributed.
+
+We all know the best way to learn is by doing, so let's install a RDBMS and play with the above topics. 
+I am going to use PostgreSQL, but you are free to choose any relational db like MySQL, Oracle or MSSQL Server. The goal is to understand the concept andnot learn any particular
+database. 
+
+#### Installation
+To install PostgreSQL locally without docker you can follow the official page: [Installation Guide](https://www.postgresql.org/download/)
+
+If you want to use docker, make sure you have docker installed and use this compose file to get started:
+
+
+
+
 #### What are the pros of this
 #### What the cons
 #### When should you consider using it
