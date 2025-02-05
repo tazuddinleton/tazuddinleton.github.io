@@ -51,8 +51,7 @@ Relational databases or SQL databases stores the data in tables, rows and column
 Without going into lots of detail about theories of relational databses, understanding a few concepts around this will help:
 - Table, row and column
 - Schema
-- DDL
-- DML
+- DDL & DML
 - Referential Integrity
 - Keys (Primary key, Foreign key)
 - Indexes
@@ -63,18 +62,50 @@ Without going into lots of detail about theories of relational databses, underst
 Now going into details about each of these topics will increase the scope of this post, rather let's learn what they are and what purpose they serve.
 In future posts in this series we will go a lot deeper about all of them and some more relevant topics such as Database Partitioning, Sharding in distributed.
 
-We all know the best way to learn is by doing, so let's install a RDBMS and play with the above topics. 
-I am going to use PostgreSQL, but you are free to choose any relational db like MySQL, Oracle or MSSQL Server. The goal is to understand the concept andnot learn any particular
-database. 
-
-#### Installation
-To install PostgreSQL locally without docker you can follow the official page: [Installation Guide](https://www.postgresql.org/download/)
-
-If you want to use docker, make sure you have docker installed and use this compose file to get started:
+#### Table
+Relational databases stores data in Tables, consisting of rows and columns. In theoritical perspective, tables are called *Relation*, rows are *Tuples* and columns are referred to as *Attributes*. This is an example of a table with few columns and rows, tables have unique names, unique under a schmea.
+ ![alt text](/assets/images/posts/a-table.png)
 
 
+#### Schema
+Schema is the logical design of the databse, in our example of the *Address* Table, the schema is the table name, all the column names and their meta data, like name, data type, constraint etc. The actual data is not shcema, just the desisgn is.
+You have understand two things about schema -
+- It's the logical design of the database without the data
+- Schema has instances or snapshots with real data
 
+Maybe a Object Oriented analogy will help more, schema is like a class definition and instance of that schema is like instances of the class, the real objects.
 
+In our case the schema of the *Address* table will look something like this:
+<!-- ![alt text](/assets/images/posts/table-schema.png) -->
+```sql
+CREATE TABLE [Person].[Address](
+	[AddressID] [int] IDENTITY(1,1) NOT FOR REPLICATION NOT NULL,
+	[AddressLine1] [nvarchar](60) NOT NULL,
+	[AddressLine2] [nvarchar](60) NULL,
+	[City] [nvarchar](30) NOT NULL,
+	[StateProvinceID] [int] NOT NULL,
+	[PostalCode] [nvarchar](15) NOT NULL,
+	[SpatialLocation] [geography] NULL,
+	[rowguid] [uniqueidentifier] ROWGUIDCOL  NOT NULL,
+	[ModifiedDate] [datetime] NOT NULL,
+ CONSTRAINT [PK_Address_AddressID] PRIMARY KEY CLUSTERED 
+(
+	[AddressID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+```
+
+#### DDL
+DDL stands for Data Definition Language and it is used to define varios databse objects like Table, Stored Procedure, Function etc. The above image show an example of DDL where you can see statement `CREATE TABLE` and then the schema, table name and also notice that it goes on to describes the whole table with so much details. The DDL let's you 
+- Describe the Table (Relation)
+- Describe the integrity constraints (we will talk about them shortly)
+- Types of values related to each column (Attribute)
+- Indeces for the table
+- Authorization information
+- The physical structure of the data in the disk
+
+#### DML
+DML stands for Data Manipulation Language
 #### What are the pros of this
 #### What the cons
 #### When should you consider using it
