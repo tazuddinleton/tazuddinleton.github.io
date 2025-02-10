@@ -1,6 +1,5 @@
 The absolute minimum series is a series of blogs I intend to write for the beginners. I'll guide you through the software engineering paradigm in this series, you'll learn everything you need to be a solid junior to mid level developer in 2025.
 
-
 But why am I starting with databases, and not somethign like how to leverage AI? Because you'll learn to leverage AI in 2025 that is a given, what is unsure is that you'll learn the basics of SQL or the basics of any technology in 2025.
 
 The basics are more important than ever to master, specailly becasue of AI.
@@ -51,9 +50,9 @@ Relational databases or SQL databases stores the data in tables, rows and column
 Without going into lots of detail about theories of relational databses, understanding a few concepts around this will help:
 - Table, row and column
 - Schema
+- Keys (Super Key, Candidate Key, Primary key, Foreign key)
 - DDL & DML
 - Referential Integrity
-- Keys (Primary key, Foreign key)
 - Indexes
 - Constraints
 - Transactions and ACID property
@@ -94,6 +93,37 @@ CREATE TABLE [Person].[Address](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 ```
+
+#### Keys
+##### Super Key
+Super key is a set of columns in a table that when considered collectively can uniquely identify each row of the table. consider following table:
+```sql
+Instructor (ID, Name, DepartmentName)
+```
+In this Instructor table we can identify several combination that can uniquely identify each row. All of them are super keys.
+* {ID}
+* {ID, Name}
+* {ID, DepartmentName}
+* {ID, Name, DepartmentName}
+* {Name, DepartmentName}
+
+##### Candidate Key
+A candidate key is a minimal super key that when you take out one of it's item loses the status of super key. Let's examine each Super key to identify the candidate keys by this formula:
+
+* {ID} is a candidate key because if you take out the only column it has it loses the super key status.
+* {ID, Name} is not a candidate key, because ID is already a super key thus making the combination not minimal.
+* {ID, DepartmentName} same as above, not minimal.
+* {ID, Name, DepartmentName} same as above, not minimal.
+* {Name, DepartmentName} this is a candidate key because, any of these columns individually is not a super key, but the combination itself is a super key.
+
+So from this analysis we conclude that {ID} and {Name, DepartmentName} are the only candidate keys we have in the instructor table.
+
+##### Primary key
+From several candidate keys the one chosen by the database designer to be used as the principal way to identify a row is called Primary Key.
+
+##### Foreign key
+
+
 
 #### DDL
 DDL stands for Data Definition Language and it is used to define varios databse objects like Table, Stored Procedure, Function etc. The above image show an example of DDL where you can see statement `CREATE TABLE` and then the schema, table name and also notice that it goes on to describes the whole table with so much details. The DDL let's you 
