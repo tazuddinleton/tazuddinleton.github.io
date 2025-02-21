@@ -126,7 +126,7 @@ From several candidate keys the one chosen by the database designer to be used a
 
 
 #### DDL
-DDL stands for Data Definition Language and it is used to define varios databse objects like Table, Stored Procedure, Function etc. The above image show an example of DDL where you can see statement `CREATE TABLE` and then the schema, table name and also notice that it goes on to describes the whole table with so much details. The DDL let's you 
+DDL stands for Data Definition Language and it is used to define varios database objects like Table, Stored Procedure, Function etc. The above image show an example of DDL where you can see statement `CREATE TABLE` and then the schema, table name and also notice that it goes on to describes the whole table with so much details. The DDL let's you 
 - Describe the Table (Relation)
 - Describe the integrity constraints (we will talk about them shortly)
 - Types of values related to each column (Attribute)
@@ -136,34 +136,9 @@ DDL stands for Data Definition Language and it is used to define varios databse 
 
 #### DML
 DML stands for Data Manipulation Language
-#### What are the pros of this
-#### What the cons
-#### When should you consider using it
+#### Referential Integrity
+#### Indexes
+#### Constraints
+#### Transactions and ACID property
+#### Stored Procedure, Function and Trigger
 
-
-
-### Key-value database
-As the names suggests a key-value stores the data in key-value structure. 
-#### What are the pros of this
-#### What the cons
-#### When should you consider using it
-#### Example use case
-
-### Graph database
-Graph database stores data in graphs.
-#### What are the pros of this
-#### What the cons
-#### When should you consider using it
-
-### Column store database
-Graph database stores data in graphs.
-#### What are the pros of this
-#### What the cons
-#### When should you consider using it
-
-
-### Document store database
-Graph database stores data in graphs.
-#### What are the pros of this
-#### What the cons
-#### When should you consider using it
