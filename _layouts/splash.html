@@ -28,7 +28,14 @@ layout: default
               <img src="{{ item.photo }}" alt="{{ item.name }}" class="testimonial-photo">
               <div class="testimonial-content">
                 <p class="testimonial-quote">"{{ item.quote }}"</p>
-                <p class="testimonial-author">- {{ item.name }} | <span>{{ item.position }}</span></p>
+                <p class="testimonial-author">- {{ item.name }} | <span>{{ item.position }}</span>
+                 {% if item.linkedin %}
+                 | <a href="{{ item.linkedin }}" class="linkedin-link" target="_blank" rel="noopener">
+                    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+                </a>
+                {% endif %}
+                </p>
+                
               </div>
             </div>
           {% endfor %}
