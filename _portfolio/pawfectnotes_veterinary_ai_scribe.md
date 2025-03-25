@@ -2,7 +2,7 @@
 title: "PawfectNotes"
 excerpt: "Veterinary AI Scribe"
 header:
-  # image: https://www.pawfectnotes.com/scripts/images/blog-ai.png
+  image: https://www.pawfectnotes.com/scripts/images/blog-ai.png
   teaser: https://www.pawfectnotes.com/images/logo.png
 sidebar:
   - title: "Role"

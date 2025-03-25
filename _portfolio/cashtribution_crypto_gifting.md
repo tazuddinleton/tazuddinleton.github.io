@@ -2,7 +2,7 @@
 title: "CashTribution"
 excerpt: "The Future of Gifting – Secure, Fast & Easy!"
 header:
-#   image: https://cashtribution.com/assets/img/hero-image.jpg
+  image: https://cashtribution.com/assets/img/hero-image.jpg
   teaser: https://cashtribution.com/assets/img/security.png
 sidebar:
   - title: "Role"

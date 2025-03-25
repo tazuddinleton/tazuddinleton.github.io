@@ -2,7 +2,7 @@
 title: "IBFD - Tax Research Platform"
 excerpt: "The IBFD Tax Research Platform provides the most complete and up-to-the-minute coverage of the latest tax developments"
 header:
-#   image: https://cashtribution.com/assets/img/hero-image.jpg
+  image: https://www.ibfd.org/sites/default/files/styles/xl_730w/public/2022-06/trp_home_screen_800px.webp?itok=4Hz8ChCM
   teaser: https://www.ibfd.org/sites/default/files/styles/xl_730w/public/2022-06/trp_home_screen_800px.webp?itok=4Hz8ChCM
 sidebar:
   - title: "Role"
