@@ -43,3 +43,53 @@
     color: #666;
   }
   
+
+  @media screen and (max-width: 768px) {
+    /* Adjust testimonials layout for mobile */
+    .testimonials {
+      display: flex;
+      flex-direction: column;  /* Stack testimonials vertically */
+      align-items: center;     /* Center them horizontally */
+      gap: 15px;               /* Space between cards */
+    }
+  
+    /* Adjust testimonial card layout */
+    .testimonial-card {
+      max-width: 100%;         /* Ensure full width on smaller screens */
+      padding: 15px;           /* Reduce padding for better fit */
+      margin: 0 10px;          /* Add some margin for breathing space */
+    }
+  
+    /* Adjust profile photo size for mobile */
+    .testimonial-photo {
+      width: 80px;             /* Smaller photo for mobile */
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+  
+    /* Make quote text more readable */
+    .testimonial-quote {
+      font-size: 14px;         /* Smaller font size */
+      line-height: 1.4;        /* Adjust line height for better spacing */
+    }
+  
+    /* Adjust author text size */
+    .testimonial-author {
+      font-size: 14px;         /* Slightly smaller font size */
+    }
+  
+    /* LinkedIn profile link styling */
+    .linkedin-link {
+      font-size: 13px;         /* Smaller font size */
+      margin-top: 8px;         /* Slightly smaller margin */
+    }
+  
+    /* Adjust Hero profile photo */
+    .hero-profile-photo {
+      width: 120px;            /* Adjust size for mobile */
+      height: 120px;
+      border-radius: 5px;
+    }
+  }
+  
