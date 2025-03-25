@@ -43,8 +43,7 @@
     color: #666;
   }
   
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 375px) {
     /* Adjust testimonials layout for mobile */
     .testimonials {
       display: flex;
