@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div id="main" role="main">
+  <div class="wrapper page__content">
+    <h1 class="page__title">{{ .Title }}</h1>
+    {{ .Content }}
+    {{ $pages := .Pages }}
+    {{ if $pages }}
+    <ul class="posts-list">
+      {{ range $pages }}
+      <li>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ if not .Date.IsZero }}<p class="page__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>{{ end }}
+        {{ with .Params.excerpt }}<p>{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+    {{ else }}
+    <p class="empty-note">No articles published yet — check back soon.</p>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

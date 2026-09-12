@@ -1,0 +1,10 @@
+{{ $p := .Params }}
+<div class="page__hero--overlay" style="background-color: {{ $p.header.overlay_color | default "#0A192F" }};">
+  <div class="wrapper">
+    <h1 id="page-title" class="page__title">
+      {{ with .Site.Params.author.avatar }}<img class="hero-profile-photo" src="{{ . | absURL }}" alt="{{ $.Site.Params.author.name }}">{{ end }}
+      {{ .Title | markdownify }}
+    </h1>
+    {{ with .Params.excerpt }}<p class="page__lead">{{ . }}</p>{{ end }}
+  </div>
+</div>

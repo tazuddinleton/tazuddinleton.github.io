@@ -1,0 +1,77 @@
+baseURL = "https://tazuddin.com/"
+title = "Taz Uddin"
+enableRobotsTXT = true
+
+[params]
+  description = "I help businesses and startups build rock-solid web apps and backend systems so they can scale fast, cut tech headaches, and focus on growing."
+  googleAnalytics = "G-CWXN49S0SQ"
+  twitterUsername = "tazuddinleton"
+  githubUsername = "tazuddinleton"
+
+  [params.author]
+    name = "Taz Uddin"
+    avatar = "/assets/images/taz-photo-2.jpg"
+    bio = "I'm a full-stack developer"
+    location = "Dhaka, BD"
+
+  [[params.author.links]]
+    label = "Website"
+    icon = "fa-solid fa-link"
+    url = "https://www.tazuddin.com"
+
+  [[params.author.links]]
+    label = "Twitter"
+    icon = "fa-brands fa-twitter-square"
+    url = "https://twitter.com/tazuddinleton"
+
+  [[params.author.links]]
+    label = "GitHub"
+    icon = "fa-brands fa-github"
+    url = "https://github.com/tazuddinleton"
+
+  [[params.footer.links]]
+    label = "LinkedIn"
+    icon = "fa-brands fa-linkedin"
+    url = "https://linkedin.com/in/tazuddinleton"
+
+  [[params.footer.links]]
+    label = "Twitter"
+    icon = "fa-brands fa-twitter-square"
+    url = "https://twitter.com/tazuddinleton"
+
+  [[params.footer.links]]
+    label = "GitHub"
+    icon = "fa-brands fa-github"
+    url = "https://github.com/tazuddinleton"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Works"
+  url = "/portfolio/"
+  weight = 20
+
+[[menu.main]]
+  name = "Articles"
+  url = "/posts/"
+  weight = 30
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  posts = "/posts/:slug/"
+  portfolio = "/portfolio/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS"]

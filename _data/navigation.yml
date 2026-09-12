@@ -1,9 +1,0 @@
-main:
-  - title: "Home"
-    url: /
-  - title: "Works"
-    url: /portfolio/  
-  - title: "Articles"
-    url: /posts/   
-  - title: "About"
-    url: /about/

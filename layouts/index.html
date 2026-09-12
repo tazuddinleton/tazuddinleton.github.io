@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ partial "hero.html" . }}
+
+<div id="main" role="main">
+  <article class="splash">
+    <section class="page__content">
+      {{ if .Params.intro }}
+      <h4 class="text-center">What my clients say</h4>
+      <div class="testimonials">
+        {{ range .Params.intro }}
+        <div class="testimonial-card">
+          <img src="{{ .photo }}" alt="{{ .name }}" class="testimonial-photo">
+          <div class="testimonial-content">
+            <p class="testimonial-quote">&ldquo;{{ .quote }}&rdquo;</p>
+            <p class="testimonial-author">- {{ .name }} | <span>{{ .position }}</span>
+              {{ if .linkedin }}
+              | <a href="{{ .linkedin }}" class="linkedin-link" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+              {{ end }}
+            </p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ .Content }}
+    </section>
+  </article>
+</div>
+{{ end }}

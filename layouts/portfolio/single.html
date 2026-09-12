@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div id="main" role="main">
+  {{ with .Params.header.image }}
+  <div class="portfolio-header" style="background-image: linear-gradient(rgba(10,25,47,0.55), rgba(10,25,47,0.55)), url('{{ . }}');">
+    <div class="wrapper">
+      <h1 class="page__title">{{ $.Title }}</h1>
+      {{ with $.Params.excerpt }}<p class="page__lead">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="page page--with-sidebar wrapper wide">
+    {{ if .Params.sidebar }}
+    <aside class="sidebar portfolio-sidebar">
+      {{ range .Params.sidebar }}
+      {{ $alt := .image_alt }}
+      <div class="sidebar-item">
+        <h4>{{ .title }}</h4>
+        {{ with .image }}<img src="{{ . }}" alt="{{ $alt }}">{{ end }}
+        {{ with .text }}<p>{{ . | markdownify }}</p>{{ end }}
+      </div>
+      {{ end }}
+    </aside>
+    {{ end }}
+
+    <article class="page__content">
+      {{ .Content }}
+
+      {{ if .Params.gallery }}
+      <div class="gallery gallery--half">
+        {{ range .Params.gallery }}
+        <a href="{{ .url }}" class="gallery-item">
+          <img src="{{ .image_path }}" alt="{{ .alt }}">
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </article>
+  </div>
+</div>
+{{ end }}

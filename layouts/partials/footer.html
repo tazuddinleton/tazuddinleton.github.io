@@ -1,0 +1,14 @@
+<div id="footer" class="page__footer">
+  <footer class="wrapper">
+    <ul class="footer-social-links">
+      {{ range .Site.Params.footer.links }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .label }}">
+          <i class="{{ .icon }}" aria-hidden="true"></i> {{ .label }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    <p class="footer-copyright">&copy; {{ now.Year }} {{ .Site.Params.author.name }}. Powered by Hugo.</p>
+  </footer>
+</div>

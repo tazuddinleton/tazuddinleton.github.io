@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div id="main" role="main">
+  <div class="wrapper page__content wide">
+    <h1 class="page__title">{{ .Title }}</h1>
+    <div class="portfolio-grid">
+      {{ range .Pages }}
+      {{ $itemTitle := .Title }}
+      <a class="portfolio-card" href="{{ .Permalink }}">
+        {{ with .Params.header.teaser }}<img src="{{ . }}" alt="{{ $itemTitle }} teaser" class="portfolio-card-image">{{ end }}
+        <div class="portfolio-card-body">
+          <h2>{{ .Title }}</h2>
+          {{ with .Params.excerpt }}<p>{{ . }}</p>{{ end }}
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

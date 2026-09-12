@@ -1,0 +1,27 @@
+{{ define "main" }}
+<div id="main" role="main">
+  <div class="page{{ if .Params.author_profile }} page--with-sidebar{{ end }} wrapper">
+    {{ if .Params.author_profile }}
+    <aside class="sidebar author-profile">
+      {{ with .Site.Params.author.avatar }}<img src="{{ . | absURL }}" alt="{{ $.Site.Params.author.name }}" class="author-avatar">{{ end }}
+      <h3 class="author-name">{{ .Site.Params.author.name }}</h3>
+      <p class="author-bio">{{ .Site.Params.author.bio }}</p>
+      {{ with .Site.Params.author.location }}<p class="author-location"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ . }}</p>{{ end }}
+      <ul class="author-links">
+        {{ range .Site.Params.author.links }}
+        <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}" aria-hidden="true"></i> {{ .label }}</a></li>
+        {{ end }}
+      </ul>
+    </aside>
+    {{ end }}
+
+    <article class="page__content">
+      <h1 class="page__title">{{ .Title }}</h1>
+      {{ if eq .Section "posts" }}
+      {{ if not .Date.IsZero }}<p class="page__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time></p>{{ end }}
+      {{ end }}
+      {{ .Content }}
+    </article>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="layout--{{ .Layout | default "default" }}">
+    {{ partial "header.html" . }}
+
+    <div class="initial-content">
+      {{ block "main" . }}{{ end }}
+    </div>
+
+    {{ partial "footer.html" . }}
+    {{ partial "scripts.html" . }}
+  </body>
+</html>
