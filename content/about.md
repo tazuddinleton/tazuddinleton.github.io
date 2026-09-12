@@ -11,4 +11,6 @@ Right now I'm going deeper on event-driven architecture and observability, and f
 
 I'm also starting to write — mostly about the systems-design and backend problems I run into day to day. You can find that under [Writing](/posts/).
 
+If you want the fuller story of where I've worked, including a stretch of full-time freelance client work and a few words from people I've worked with, see the [Career Timeline](/timeline/).
+
 [View my resume](/resume/) · [Download PDF](/assets/documents/Resume_TazUddin.pdf) · [Download compiled portfolio](/assets/documents/Portfolio_TazUddin.pdf)

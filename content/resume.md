@@ -21,10 +21,10 @@ experience:
       - "Implemented and maintained end-to-end CI/CD pipelines using Jenkins, automating build, test, and deployment across microservices environments"
     technologies: [".NET 8", "PostgreSQL", "RabbitMQ", "Jenkins", "Grafana", "OpenTelemetry", "gRPC", "OpenIddict"]
 
-  - role: "Senior Software Engineer"
+  - role: "Freelance Software Engineer (Upwork)"
     company: "PPG.DEV & PawfectNotes"
     location: "US, Remote"
-    period: "2024 – Jun 2025"
+    period: "Oct 2024 – Jun 2025"
     highlights:
       - "Designed a real-time corporate email ingestion system processing metadata via Azure Functions and Google Cloud Pub/Sub queues"
       - "Implemented Microsoft Entra ID authentication and integrated ingestion webhooks into client enterprise platforms"

@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ partial "hero.html" . }}
+<div id="main" role="main">
+  <div class="wrapper page__content">
+    <div class="timeline">
+      {{ range .Params.entries }}
+      <div class="timeline-entry">
+        <span class="timeline-dot"></span>
+        <p class="timeline-period">{{ .period }}</p>
+        <h3 class="timeline-role">{{ .role }}</h3>
+        <p class="timeline-org">{{ .org }}</p>
+        {{ with .note }}<p class="timeline-note">{{ . }}</p>{{ end }}
+        {{ range .quotes }}
+        {{ $name := .name }}
+        <div class="timeline-quote">
+          <p class="timeline-quote-text">&ldquo;{{ .quote }}&rdquo;</p>
+          <div class="timeline-quote-author">
+            {{ with .photo }}<img src="{{ . }}" alt="{{ $name }}">{{ end }}
+            <span><strong>{{ .name }}</strong> &middot; {{ .position }}
+              {{ if .linkedin }} &middot; <a href="{{ .linkedin }}" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>{{ end }}
+            </span>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}
