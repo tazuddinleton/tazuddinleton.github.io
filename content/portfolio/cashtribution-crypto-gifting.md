@@ -3,8 +3,8 @@ title: "CashTribution"
 slug: "cashtribution-crypto-gifting"
 excerpt: "The Future of Gifting – Secure, Fast & Easy!"
 header:
-  image: https://cashtribution.com/assets/img/hero-image.jpg
-  teaser: https://cashtribution.com/assets/img/security.png
+  image: /assets/images/projects/cashtribution/dashboard.png
+  teaser: /assets/images/projects/cashtribution/home.png
 sidebar:
   - title: "Role"
     image: /assets/images/projects/cashtribution/logo.png
