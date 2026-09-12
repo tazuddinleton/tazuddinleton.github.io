@@ -4,6 +4,17 @@
 <div id="main" role="main">
   <article class="splash">
     <section class="page__content">
+      {{ if .Params.quick_links }}
+      <div class="quick-links">
+        {{ range .Params.quick_links }}
+        <a class="quick-link-card" href="{{ .url | absURL }}">
+          <i class="{{ .icon }}" aria-hidden="true"></i>
+          <span>{{ .label }}</span>
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+
       {{ if .Params.intro }}
       <h4 class="text-center">What my clients say</h4>
       <div class="testimonials">

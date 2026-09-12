@@ -1,8 +1,18 @@
 ---
 title: "Hi, 👋 I'm Taz."
-excerpt: "I help businesses and startups build rock-solid web apps and backend systems so they can scale fast, cut tech headaches, and focus on growing."
+excerpt: "Full-stack software engineer and architect building distributed systems, multi-tenant SaaS, and real-time applications. This is my resume, and where I've started writing."
 header:
   overlay_color: "#0A192F"
+quick_links:
+  - label: "View my Resume"
+    url: "/resume/"
+    icon: "fa-solid fa-file-lines"
+  - label: "Read my Writing"
+    url: "/posts/"
+    icon: "fa-solid fa-pen-nib"
+  - label: "See my Work"
+    url: "/portfolio/"
+    icon: "fa-solid fa-diagram-project"
 intro:
   - name: "Alireza A."
     position: "Senior Manager of Web Application, NovotechSoftware"

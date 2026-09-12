@@ -1,0 +1,90 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<div id="main" role="main">
+  <div class="wrapper resume">
+    <header class="resume-header">
+      <div class="resume-header-text">
+        <h1 class="page__title">{{ .Site.Params.author.name }}</h1>
+        <p class="resume-role">{{ (index $p.experience 0).role }}</p>
+        <ul class="resume-contact">
+          {{ with $p.contact.location }}<li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> {{ . }}</li>{{ end }}
+          {{ with $p.contact.email }}<li><a href="mailto:{{ . }}"><i class="fa-solid fa-envelope" aria-hidden="true"></i> {{ . }}</a></li>{{ end }}
+          {{ with $p.contact.phone }}<li><i class="fa-solid fa-phone" aria-hidden="true"></i> {{ . }}</li>{{ end }}
+          {{ range .Site.Params.author.links }}
+          <li><a href="{{ .url }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}" aria-hidden="true"></i> {{ .label }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ with $p.resume_pdf }}
+      <a class="resume-download" href="{{ . | absURL }}" target="_blank" rel="noopener">
+        <i class="fa-solid fa-download" aria-hidden="true"></i> Download PDF
+      </a>
+      {{ end }}
+    </header>
+
+    {{ with $p.summary }}<p class="resume-summary">{{ . }}</p>{{ end }}
+
+    {{ if $p.experience }}
+    <section class="resume-section">
+      <h2>Experience</h2>
+      {{ range $p.experience }}
+      <div class="resume-entry">
+        <div class="resume-entry-head">
+          <div>
+            <h3>{{ .role }}</h3>
+            <p class="resume-entry-org">{{ .company }}{{ with .location }} &middot; {{ . }}{{ end }}</p>
+          </div>
+          <p class="resume-entry-period">{{ .period }}</p>
+        </div>
+        {{ if .highlights }}
+        <ul class="resume-highlights">
+          {{ range .highlights }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+        {{ if .technologies }}
+        <ul class="resume-tags">
+          {{ range .technologies }}<li>{{ . }}</li>{{ end }}
+        </ul>
+        {{ end }}
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ if $p.skills }}
+    <section class="resume-section">
+      <h2>Skills</h2>
+      <div class="resume-skills">
+        {{ range $p.skills }}
+        <div class="resume-skill-group">
+          <h4>{{ .category }}</h4>
+          <ul class="resume-tags">
+            {{ range .items }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+
+    {{ if $p.education }}
+    <section class="resume-section">
+      <h2>Education</h2>
+      {{ range $p.education }}
+      <div class="resume-entry">
+        <div class="resume-entry-head">
+          <div>
+            <h3>{{ .degree }}</h3>
+            <p class="resume-entry-org">{{ .school }}</p>
+          </div>
+          <p class="resume-entry-period">{{ .period }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </section>
+    {{ end }}
+
+    {{ .Content }}
+  </div>
+</div>
+{{ end }}

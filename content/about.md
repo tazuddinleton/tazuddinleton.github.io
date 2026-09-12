@@ -3,14 +3,12 @@ title: "About"
 author_profile: true
 ---
 
-Hi, I'm Taz—a passionate software engineer with over 8 years of experience developing cutting-edge enterprise web applications. My journey in tech has led me to work on diverse projects, including Fin-Tech platforms, ERP systems, EIMS, geotechnical reporting systems, and SaaS applications.
+Hi, I'm Taz — a full-stack software engineer and architect with 10+ years of experience building distributed systems, multi-tenant SaaS platforms, and real-time, mission-critical applications, mostly in the .NET ecosystem.
 
-I specialize in back-end development and have a knack for crafting robust, scalable, and efficient solutions. Whether I'm building complex microservices, optimizing database queries, or integrating systems seamlessly, I thrive on turning challenges into opportunities.
+I'm currently a Lead Full-Stack Engineer, designing microservices grounded in Domain-Driven Design: gRPC with mTLS for inter-service communication, OAuth2/OIDC identity via OpenIddict, async messaging with RabbitMQ and the Transactional Outbox Pattern, and distributed tracing across a Grafana LGTM stack. Before that I worked on real-time systems, AI-assisted tooling, and multi-tenant SaaS for clients including UNICEF, JTI, and IBFD.
 
-I'm currently diving into freelance opportunities, where I bring my expertise in technologies like ASP.NET, Entity Framework, PostgreSQL, and JavaScript frameworks to help businesses achieve their goals. Alongside freelancing, I'm also completing my BSc in Computer Science and Engineering to solidify my academic foundation.
+Right now I'm going deeper on event-driven architecture and observability, and finishing my BSc in Computer Science and Engineering at Presidency University.
 
-When I'm not coding, you'll find me exploring emerging tech trends, mentoring junior developers, or brainstorming ideas for my dream software company. Let's connect and create something impactful together!
+I'm also starting to write — mostly about the systems-design and backend problems I run into day to day. You can find that under [Writing](/posts/).
 
-[Download my resume](/assets/documents/Resume_TazUddin_DotNet.pdf)
-
-[Download compiled portfolio](/assets/documents/Portfolio_TazUddin.pdf)
+[View my resume](/resume/) · [Download PDF](/assets/documents/Resume_TazUddin.pdf) · [Download compiled portfolio](/assets/documents/Portfolio_TazUddin.pdf)
